@@ -28,7 +28,7 @@ struct Args {
 fn main() -> Result<(), Box<dyn Error>> {
     let args = Args::parse();
 
-    let _input = read_to_string(args.input.unwrap_or("input.txt".into()))?;
+    let input = read_to_string(args.input.unwrap_or("input.txt".into()))?;
 
     if args.part_b {
         println!("Part B: {:?}", part_b());
