@@ -9,3 +9,4 @@ authors = ["Cole Trammer <cole.trammer@gmail.com>"]
 
 [dependencies]
 clap = { version = "4.0.29", features = ["derive"] }
+itertools = "0.10.5"
