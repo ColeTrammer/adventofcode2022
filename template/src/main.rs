@@ -1,6 +1,6 @@
 use clap::Parser;
 use std::error::Error;
-use std::fs::File;
+use std::fs::read_to_string;
 use std::path::PathBuf;
 
 fn part_a() -> i32 {
@@ -28,7 +28,7 @@ struct Args {
 fn main() -> Result<(), Box<dyn Error>> {
     let args = Args::parse();
 
-    let _input = File::open(args.input.unwrap_or("input.txt".into()))?;
+    let _input = read_to_string(args.input.unwrap_or("input.txt".into()))?;
 
     if args.part_b {
         println!("Part B: {:?}", part_b());
