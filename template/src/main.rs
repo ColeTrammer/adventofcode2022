@@ -3,11 +3,11 @@ use std::error::Error;
 use std::fs::read_to_string;
 use std::path::PathBuf;
 
-fn part_a() -> i32 {
+fn part_a(input: String) -> i32 {
     0
 }
 
-fn part_b() -> i32 {
+fn part_b(input: String) -> i32 {
     0
 }
 
@@ -31,9 +31,9 @@ fn main() -> Result<(), Box<dyn Error>> {
     let input = read_to_string(args.input.unwrap_or("input.txt".into()))?;
 
     if args.part_b {
-        println!("Part B: {:?}", part_b());
+        println!("Part B: {:?}", part_b(input.clone()));
     } else {
-        println!("Part A: {:?}", part_a());
+        println!("Part A: {:?}", part_a(input.clone()));
     }
 
     Ok(())
