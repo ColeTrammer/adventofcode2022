@@ -7,7 +7,7 @@ fn part_a(input: String) -> i32 {
     0
 }
 
-fn part_b(input: String) -> i32 {
+fn part_b(_input: String) -> i32 {
     0
 }
 
