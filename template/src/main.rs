@@ -23,12 +23,22 @@ struct Args {
     /// Whether to run part a or part b.
     #[arg(short = 'b', long, default_value_t = false)]
     part_b: bool,
+
+    /// Whether to use test.txt or input.txt as the default file.
+    #[arg(short = 't', long, default_value_t = false)]
+    test: bool,
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args = Args::parse();
 
-    let input = read_to_string(args.input.unwrap_or("input.txt".into()))?;
+    let default = if args.test {
+        "test.txt".into()
+    } else {
+        "input.txt".into()
+    };
+
+    let input = read_to_string(args.input.unwrap_or(default))?;
 
     if args.part_b {
         println!("Part B: {:?}", part_b(input.clone()));
