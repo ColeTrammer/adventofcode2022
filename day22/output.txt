@@ -1,0 +1,11 @@
+43 78 3
+Part B: 44319
+
+31 84 0
+Part B: 32340           TOO HIGH
+
+117 79 2
+Part B: 118322          TOO HIGH
+
+11 114 2
+Part B: 12462           CORRECT
